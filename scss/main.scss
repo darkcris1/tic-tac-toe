@@ -1,0 +1,76 @@
+@import 'normalize';
+@import 'fonts';
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --x-color: rgb(151, 58, 139);
+  --y-color: rgb(9, 151, 151);
+  --primary: rgb(42, 148, 209);
+}
+#root {
+  max-width: 1300px;
+  width: 100%;
+}
+#tictacTable {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid black;
+
+  .field {
+    cursor: pointer;
+    min-width: 50px;
+    min-height: 50px;
+    text-align: center;
+    font-size: 2.5rem;
+    border: 1px solid black;
+    &.winner {
+      background: rgba(144, 238, 144, 0.658);
+    }
+    &:hover:not(.winner) {
+      background-color: rgb(225, 247, 255);
+    }
+  }
+
+  .isX {
+    color: var(--x-color);
+  }
+  .isO {
+    color: var(--y-color);
+  }
+}
+
+section {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.histories {
+  display: flex;
+  flex-direction: column;
+  button {
+    margin: 1rem;
+  }
+}
+
+div#banner {
+  font-size: 1rem;
+  span {
+    font-weight: bolder;
+  }
+}
+
+button {
+  padding: 0.25rem 0.5rem;
+  margin: 1rem;
+  border-radius: 5px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-size: 1.2rem;
+}
