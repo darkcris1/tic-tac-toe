@@ -61,9 +61,7 @@ function renderTictacToe(state) {
   })
 }
 
-const restartBtn = document.querySelector('#restartBtn')
-
-restartBtn.addEventListener('click', () => {
+document.querySelector('#restartBtn').addEventListener('click', () => {
   tictacState.set(tictacInitialState)
 })
 
